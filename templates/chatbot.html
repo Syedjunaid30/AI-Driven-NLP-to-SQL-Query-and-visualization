@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>PromptSQL - Analytics Assistant</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.min.js"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-title">PromptSQL</div>
+    <a href="{{ url_for('logout') }}" class="logout-btn">Logout</a>
+  </nav>
+
+  <div class="app-container">
+    <div class="sidebar">
+      <h3>History</h3>
+      <ul id="historyList"></ul>
+    </div>
+
+    <div class="main-content">
+      <h1>PromptSQL Assistant</h1>
+
+      <div class="input-group">
+        <input type="text" id="userInput" placeholder="Ask a question like 'Show top 5 students by age'" />
+        <button onclick="sendQuery()">Ask</button>
+      </div>
+
+      <div class="results" id="resultsContainer" style="display:none;">
+        <h2>Generated SQL</h2>
+        <pre id="sqlQuery"></pre>
+
+        <h2>Chart Output</h2>
+        <canvas id="resultChart" width="600" height="300"></canvas>
+
+        <h2>Data Table</h2>
+        <div class="table-wrapper">
+          <table id="resultTable">
+            <thead id="tableHead"></thead>
+            <tbody id="tableBody"></tbody>
+          </table>
+        </div>
+
+        <button onclick="downloadAll()">⬇️ Download Result (SQL + Chart + CSV)</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
