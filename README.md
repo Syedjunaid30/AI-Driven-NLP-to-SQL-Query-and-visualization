@@ -26,6 +26,8 @@ python app.py
 - **Username:** `admin`  
 - **Password:** `admin123`  
 
+> **Note:** Currently, the admin has access **only to add database tables**. Other admin functionalities are under development.
+
 ## Repository Access
 This repository has been shared with the required team members for NS Code Review purposes.
 
