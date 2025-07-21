@@ -12,10 +12,7 @@ This project implements an AI-powered system that converts natural language quer
 - User-friendly natural language query interface  
 - Dynamic SQL generation with support for complex queries  
 - Data visualization with different chart types (bar, pie, line)  
-- Secure user authentication and role-based access  
-- Admin features to manage users and database connections  
-- Query history and saved queries for users  
-- Export query results in CSV/Excel format  
+- Secure user authentication and role-based access    
 - Error handling and query optimization suggestions  
 - Responsive UI with improved user experience
 
