@@ -35,6 +35,53 @@ python app.py
 
 > **Note:** Currently, the admin has access **only to add database tables**. Other admin functionalities are under development.
 
+## Admin Login Credentials
+> To access the admin panel, use:  
+- **Username:** `admin`  
+- **Password:** `admin123`  
+
+> **Note:**  
+Currently, the admin has access **only to add database tables**.  
+Other admin functionalities are under development.
+
+## Database Configuration  
+We are using **XAMPP's phpMyAdmin MySQL server**, which by default does **not require a password** to access the database (`root` user with an empty password).  
+
+If you are using MySQL with a password, update the database connection in `app.py` like this:  
+
+## Admin Login Credentials
+> To access the admin panel, use:  
+- **Username:** `admin`  
+- **Password:** `admin123`  
+
+> **Note:**  
+Currently, the admin has access **only to add database tables**.  
+Other admin functionalities are under development.
+
+## Database Configuration  
+We are using **XAMPP's phpMyAdmin MySQL server**, which by default does **not require a password** to access the database (`root` user with an empty password).  
+
+If you are using MySQL with a password, update the database connection in `app.py` like this:  
+
+```python
+import mysql.connector
+
+db_config = {
+    'host': 'localhost',
+    'user': 'root',
+    'password': 'your_mysql_password',  # 🔒 Add your MySQL password here
+    'database': 'your_database_name'
+}
+
+def run_query(query):
+    conn = mysql.connector.connect(**db_config)
+    cursor = conn.cursor()
+    cursor.execute(query)
+    result = cursor.fetchall()
+    conn.close()
+    return result
+```
+
 ## Repository Access
 This repository has been shared with the required team members for NS Code Review purposes.
 
