@@ -9,7 +9,6 @@ This project implements an AI-powered system that converts natural language quer
 - 🛠️ Built with Flask, MySQL, and modern front-end libraries
 
 ## Planned Features (Upcoming)
-- User-friendly natural language query interface  
 - Dynamic SQL generation with support for complex queries  
 - Data visualization with different chart types (bar, pie, line)  
 - Secure user authentication and role-based access    
