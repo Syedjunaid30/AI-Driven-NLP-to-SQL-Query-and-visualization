@@ -81,6 +81,21 @@ def run_query(query):
     conn.close()
     return result
 ```
+## 📝 Sample complex Prompts to Try (Advanced SQL Queries)
+
+| # | Prompt |
+|---|--------|
+| 1️⃣ | Show the department(s) with the highest average student age. |
+| 2️⃣ | List the courses that have more than 5 students enrolled. |
+| 3️⃣ | Find students who are enrolled in all courses offered by their department. |
+| 4️⃣ | List departments where female students have an average grade of ‘A’ in their enrollments. |
+| 5️⃣ | Show total number of students who joined each year, ordered by most recent year. |
+| 6️⃣ | Find all courses that have no enrollments yet. |
+| 7️⃣ | List top 3 departments with the highest number of enrolled students. |
+| 8️⃣ | Show average credits per course grouped by department. |
+| 9️⃣ | Find students who are enrolled in both ‘Data Structures’ and ‘Algorithms’. |
+| 🔟 | Show departments that have no students enrolled in any course. |
+
 
 ## Repository Access
 This repository has been shared with the required team members for NS Code Review purposes.
